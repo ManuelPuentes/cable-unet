@@ -10,3 +10,8 @@
     - paso 6: nuevamente desde el directorio raiz ejecutar el siguiente comando: `php artisan migrate`
     - paso 7: verificamos la migracion de la BBDD de el proyecto ejecutando el siguiente comando : `php artisan migrate:status`
     - paso 8: correr el servidor php y mysql desde Xampp y acceder al proyecto desde: `localhost/cable-unet/public`     
+
+
+### Integrantes del proyecto : 
+    - Eric vivas ci:26403483
+    - Manuel Puentes ci: 26122874
