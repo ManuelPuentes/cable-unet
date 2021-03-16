@@ -13,12 +13,49 @@
 </head>
 <body>
 
-    Cambiar paquete servicios        
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../public/Img/logo.png" alt="" height="70">
+    </a>
+	
+	<form class="d-flex">
+	<a href="{{url('/modulo_suscriptor/ver_servicios_contratar')}}">
+        <input class="btn btn-sm btn-outline-primary m-2" type="button" value="Ver o contratar paquetes de servicios">
+    </a>
+
+    <a href="{{url('/modulo_suscriptor/factura_mensual')}}">
+        <input class="btn btn-sm btn-outline-primary m-2" type="button" value="Factura mensual">
+    </a>
+
+    <a href="{{url('/modulo_suscriptor/cambiar_paquete_servicios')}}">
+        <input class="btn btn-sm btn-primary m-2" type="button" value="Cambiar paquete de servicios">
+    </a>
+	
+	<a href="{{url('/modulo_suscriptor/buscar_programacion')}}">
+        <input class="btn btn-sm btn-outline-primary m-2" type="button" value="Buscar programación de canal">
+    </a>
+	
+	<a href="{{url('/modulo_suscriptor/cerrar_sesion')}}">
+        <input class="btn btn-sm btn-outline-danger m-2" type="button" value="Cerrar sesión">
+    </a>
+    </form>
+  </div>
+</nav>
+	
+	
+	
+	<div class="container">
+	<div class="row">
+	<div class="col"></div>
+	<div class="col-6">
+	
+    <h1>Cambiar paquetes</h1>        
 
     <br>
     <br>
 
-    <form action="{{url('/modulo_suscriptor/cambiar_paquete_servicios_3')}}" method="post">
+    <form class="form-label" action="{{url('/modulo_suscriptor/cambiar_paquete_servicios_3')}}" method="post">
 
         {{ csrf_field() }}
         <input type="hidden" name="id_contrato" value="{{$contrato->id}}">
@@ -38,36 +75,39 @@
                     <select name="nuevo_paquete_servicio">
                         @foreach ($paquetes_servicios as $paquete_servicios)
                             @if($paquete_servicios->nombre != $contrato->servicio_contratado)
-                                <option value="{{$paquete_servicios->nombre}}">{{$paquete_servicios->nombre}}</option>
+                                <option class="form-select" value="{{$paquete_servicios->nombre}}">{{$paquete_servicios->nombre}}</option>
                             @endif
                         @endforeach
                     </select>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <input type="submit" value="Cambiar">
-                </td>
             </tr>
         </table>
+		
+		<input class="btn btn-primary" type="submit" value="Cambiar">
 
     </form>
 
     <br>
     <br>
-
-    <div id="mensaje">
-        @isset($mensaje_servidor)
+	
+	@isset($mensaje_servidor)
+	<div class="card bg-light" id="mensaje">
+			<div class="card-body">
+			<h5 class="h5 text-center">
+        
             {{$mensaje_servidor}}
+			</h5>
+	</div>
+	</div>
         @endisset
-    </div>
-
+	
+	</div>
+	
+	<div class="col"></div>
     <br>
     <br>
-
-    <a href="{{ url('/modulo_suscriptor/cambiar_paquete_servicios') }}">
-        <input type="button" value="Regresar">
-    </a>
-
+</div>
 </body>
 </html>

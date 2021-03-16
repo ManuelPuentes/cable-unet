@@ -19,10 +19,10 @@
     </a>
 	
 	<form class="d-flex">
-	<a href="{{url('/modulo_suscriptor/ver_servicios_contratar')}}">
+	<!-- <a href="{{url('/modulo_suscriptor/ver_servicios_contratar')}}">
         <input class="btn btn-sm btn-outline-primary m-2" type="button" value="Ver o contratar paquetes de servicios">
-    </a>
-
+    </a> -->
+<!-- 
     <a href="{{url('/modulo_suscriptor/factura_mensual')}}">
         <input class="btn btn-sm btn-primary m-2" type="button" value="Factura mensual">
     </a>
@@ -33,10 +33,10 @@
 	
 	<a href="{{url('/modulo_suscriptor/buscar_programacion')}}">
         <input class="btn btn-sm btn-outline-primary m-2" type="button" value="Buscar programación de canal">
-    </a>
+    </a> -->
 	
-	<a href="{{url('/modulo_suscriptor/cerrar_sesion')}}">
-        <input class="btn btn-sm btn-outline-danger m-2" type="button" value="Cerrar sesión">
+	<a href="{{url('/')}}">
+        <input class="btn btn-sm btn-outline-danger m-2" type="button" value="Volver">
     </a>
     </form>
   </div>

@@ -49,17 +49,15 @@
 					<td></td>
                 </tr>
                 @foreach ($paquetes_servicios as $paquete_servicios)
-				
-                    <tr>
-                    <td>{{$paquete_servicios->nombre}}</td>
+			<tr>	
+                        <td>{{$paquete_servicios->nombre}}</td>
                         <td>{{$paquete_servicios->precio}}$</td>
                         <td>
                            <a href="{{url('/modulo_suscriptor/detalles_contratar/detalles/paquete')}}/{{$paquete_servicios->id}}">
 								<input class="btn btn-primary" type="button" value="Ver detalles o contratar">
 								</a> 
                         </td>
-                    </tr>
-
+			</tr>
                 @endforeach
             </table>
 			
@@ -173,7 +171,15 @@
         @endif
 
     @else
-        <h2>Por los momentos no hay ningún servicio disponible</h2>
+		<div class="container">
+		<div class="row justify-content-center align-items-center vh-100">
+		<div class="col">
+		<div class="card-body bg-danger">
+			<h1 class="text-white">Por los momentos no hay ningún servicio disponible</h1>
+		</div>
+		</div>
+		</div>
+		</div>
 
         
     @endif

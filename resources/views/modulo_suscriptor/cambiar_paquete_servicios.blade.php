@@ -82,12 +82,19 @@
 
         <br>
         <br>
-
-        <div id="mensaje">
-        @isset($mensaje_servidor)
+			
+			@isset($mensaje_servidor)
+			
+        <div class="card bg-light" id="mensaje">
+			<div class="card-body">
+			<h5 class="h5 text-center">
+        
             {{$mensaje_servidor}}
-        @endisset
+			
+			</h5>
+			</div>
         </div>
+		@endisset
         
     @else
 			
