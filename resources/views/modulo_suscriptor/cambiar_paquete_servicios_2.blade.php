@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<script src="{{ asset('js/bootstrap.js') }}"></script>
+	<link href="{{ asset('css/paginau.css') }}" rel="stylesheet">
+	
     <title>Cambiar paquete servicios</title>
 </head>
 <body>
@@ -18,8 +23,8 @@
         {{ csrf_field() }}
         <input type="hidden" name="id_contrato" value="{{$contrato->id}}">
 
-        <table>
-            <tr>
+        <table class="table table-light">
+            <tr class="table-primary">
                 <td>Identificador del contrato:</td>
                 <td>{{$contrato->id}}</td>
             </tr>

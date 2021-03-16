@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<script src="{{ asset('js/bootstrap.js') }}"></script>
+	<link href="{{ asset('css/paginau.css') }}" rel="stylesheet">
+	
     <title>Detalles paquete servicio</title>
 </head>
-<body>
-    Detalles paquete servicio
-    
-    <br>
-    <br>
-
-    <form action="{{url('/modulo_suscriptor/detalles_contratar/contratar')}}" method="post">
+<body class="">
+	
+	<div class="container">
+	  <div class="row justify-content-center align-items-center vh-100 ">
+	  <div class="col-4">
+		
+		
+    <form class="card-body bg-light" action="{{url('/modulo_suscriptor/detalles_contratar/contratar')}}" method="post">
+		<h2>Detalles del Paquete</h2>
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$paquete_servicio->id}}">
-        <table>
+        
             <tr>
                 <td>Nombre:</td>
                 <td>{{$paquete_servicio->nombre}}</td>
@@ -29,7 +36,9 @@
                 <td>{{$paquete_servicio->descripcion}}</td>
             </tr>
             <tr>
-                <td>Servicios:</td>
+			
+			<table class="table mt-4">
+                <td class="table-primary">Servicios:</td>
             </tr>
             @foreach ($servicios as $servicio)
                 <tr>
@@ -40,11 +49,15 @@
             @endforeach
             <tr>
                 <td>
-                    <input type="submit" value="Contratar">
+				<br>
+                    <input class="btn btn-primary" type="submit" value="Contratar">
                 </td>
             </tr>
         </table>
     </form>
-
+	
+	</div>
+	</div
+ </div>
 </body>
 </html>

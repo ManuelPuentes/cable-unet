@@ -1,0 +1,7 @@
+body{
+    
+    background-image: url(../img/login.jpg);
+    background-size: cover;
+    background-position: center;
+    /* overflow: hidden; */
+}

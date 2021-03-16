@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @if(count($canales) != 0)
         <script src="{{ asset('js/validaciones_formulario.js') }}"></script>
+        <script src="{{ asset('js/validaciones_formulario.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/admin_page.css') }}" rel="stylesheet">
     @endif
     <title>Buscar programación</title>
 </head>

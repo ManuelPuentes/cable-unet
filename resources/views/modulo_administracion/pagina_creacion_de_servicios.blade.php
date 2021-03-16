@@ -7,6 +7,16 @@
     <title>Página creación de servicios</title>
 </head>
 <body>
+
+<div class="container-fluid vh-100">
+
+    <div class="row justify-content-start .align-top ">
+
+    </div>
+    
+</div>
+
+
     
     <a href="{{ url('/modulo_administracion/pagina_creacion_de_servicios/cable') }}">
         <input type="button" value="Cable">

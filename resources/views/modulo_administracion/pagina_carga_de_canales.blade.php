@@ -5,47 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ asset('js/validaciones_formulario.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin_page.css') }}" rel="stylesheet">
     <title>Cargar canal</title>
 </head>
 <body>
     
-    Nuevo canal
+<div class="container">
 
-    <br>
-    <br>
+<div class="row justify-content-center align-items-center vh-100 ">
 
-    <form action="{{ url('/modulo_administracion/procesar_carga_de_canales') }}" method="post">
+  <div class="col-4 ">
+  <form class="form-control" action="{{ url('/modulo_administracion/procesar_carga_de_canales') }}" method="post">
         {{ csrf_field() }}
-        <table>
-            <tr>
-                <td>Nombre:</td>
-                <td><input type="text" name="nombre"></td>
+
+        <a href="{{ url('/modulo_administracion/pagina_principal_administracion') }}">
+            <input class="btn-close" type="button" value="">
+        </a>
+
+        <div class="input-group mb-3 text-align-center">
+            <h2 class="text-center">Cargar Canal</h2>
+        </div>
+
+        <table  class ="col-12">
+            <tr class="input-group justify-content-center col-12" >
+                <td class="col-12"><input class="form-control  mb-1" type="text" name="nombre" placeholder="Nombre del Canal" ></td>
+            </tr>
+
+            <tr class="input-group justify-content-center col-12" >
+                <td class="col-12"><input class="form-control  mb-1" type="text" name="descripcion" placeholder="descripcion del Canal" ></td>
             </tr>
             <tr>
-                <td>Descripción:</td>
-                <td><input type="text" name="descripcion"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Enviar"></td>
+                <td><input class= "btn btn-outline-primary" type="submit" value="Enviar"></td>
             </tr>
         </table>
     </form>
-    
-    <br>
-    <br>
+  </div>
+  
+
+</div>
+</div>
 
     <div id="mensaje">
         @isset($mensaje_servidor)
             {{$mensaje_servidor}}
         @endisset
     </div>
-
-    <br>
-    <br>
-
-    <a href="{{ url('/modulo_administracion/pagina_principal_administracion') }}">
-        <input type="button" value="Regresar">
-    </a>
 
 </body>
 </html>
