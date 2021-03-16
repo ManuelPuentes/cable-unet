@@ -4,43 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/commons.css') }}" rel="stylesheet">
-    <title>Index</title>
+	
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<script src="{{ asset('js/bootstrap.js') }}"></script>
+	
+    <title>Cable Unet</title>
 </head>
+<body>
 
-<body>    
-    <div class="container"> 
-    
-       <header>
-            <a href="" class="logo"> </a>
-            <span> </span>   
-               <a href="{{ url('/modulo_administracion/iniciar_sesion') }}" class="button">
-                    <input type="button" value="Sesión admin">
-                </a>
-                <a href="{{ url('/modulo_suscriptor/iniciar_sesion') }}">
-                    <input type="button" value="Sesión cliente">
-                </a>
-                <a href="{{ url('/modulo_suscriptor/registrar') }}" class="index_button">
-                    <input type="button" value="Registrate">
-                </a>
-        </header>
+<nav class="navbar navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../public/Img/logo.png" alt="" height="70">
+    </a>
+	<form class="d-flex">
+	<a href="{{ url('/modulo_administracion/iniciar_sesion') }}">
+        <input class="btn btn-outline-primary m-2" type="button" value="Iniciar sesión administrador">
+    </a>
 
-        <div class="feed">
-            <div class="slider">
-                
-                <div class="slide"> <p>Contacta con nosotros!</p> </div>
-                <div class="slide"> <p>Navega sin limites y a la Maxima Velocidad </p> </div>
-                <div class="slide"> <p>Mantente en Contacto con Todos</p> </div>
-                <div class="slide"> <p>Disfruta de Los Mejores Canales</p> </div>
+    <a href="{{ url('/modulo_suscriptor/iniciar_sesion') }}">
+        <input class="btn btn-outline-primary m-2" type="button" value="Iniciar sesión suscriptor">
+    </a>
 
-            </div>
-        </div>
+    <a href="{{ url('/modulo_suscriptor/registrar') }}">
+        <input class="btn btn-outline-primary m-2" type="button" value="Registrar suscriptor">
+    </a>
+    </form>
+  </div>
+</nav>
 
-    
+<div id="carouselExampleControls" class="carousel slide carousel-fade"  data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../public/Img/navegacion.jpg" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="../public/Img/telefonia.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../public/Img/tv.jpg" class="d-block w-100" alt="...">
+    </div>
+	<div class="carousel-item">
+      <img src="../public/Img/atencion al cliente.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-
-
+    
 </body>
 </html>
