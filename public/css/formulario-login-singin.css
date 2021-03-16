@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: sans-serif;
+    background: #1f1f1f;
+    background-image: url(../Img/login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 100%;
+
+ 
+}
+
+.contenedor{
+    height: 100vh;
+    display: flex;
+
+
+}
+
+h1{
+    color:#fff;
+    text-align: center;
+}
+
+.form-registro {
+    width: 98%;
+    max-width: 500px;
+    background: white;
+    border-radius: 7px;
+    margin: auto;
+   
+}
+.form-titulo{
+
+    background: crimson;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 7px 7px 0px 0px;
+    border-bottom: 5px solid gold;
+
+    
+}
+
+.contenedor-inputs{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input,select{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.inputs-50{
+    width: 48%;
+}
+
+.inputs-100{
+    width: 100%;
+}
+.btn-enviar{
+    background:crimson;
+    color: #fff;
+    margin: auto;
+    padding: 10px 40px; 
+}
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form-link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+}

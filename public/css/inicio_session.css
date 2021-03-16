@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 1fr 9fr ;
+}
+
+.login_contenedor{
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/internet.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.login{
+
+    width: 20%;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid lightgray;
+    background-color: linen;
+}
+
+.login_title{
+    width: 100%;
+}
+
+.login_title>h2{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 10px;
+    color: white;
+
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    background-color: deepskyblue;
+    border-bottom: 3px solid dimgray;
+}
+
+.login>form{
+
+    padding-top:10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 60%;
+
+}
+
+.top_bar{
+    border-bottom: 2px solid lightgrey;
+}
+
+a{
+    padding: 0;
+    margin: 0;
+}
+
+input[type=submit], input[type=button]{
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    width: 160px;
+    margin: 5px 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: lightskyblue;
+    font-weight: bolder;
+    font-size: 20px;
+}
+ 
+input[type=submit]:hover, input[type=button]:hover{
+
+    border: 3px solid lightblue;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+header{
+    background-color: white;
+    display: grid;
+    border-bottom: 5px solid lightgray;
+    grid-template-columns: 2fr 5fr 1fr 1fr 1fr ;
+}
+
+.logo{
+    color: black;
+    text-decoration: none; 
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    background-position: center;
+}

@@ -5,14 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ asset('js/validaciones_formulario.js') }}"></script>
+    <link href="{{ asset('css/registro.css') }}" rel="stylesheet">
+
     <title>Registrar suscriptor</title>
 </head>
 <body>
 
-    Nuevo suscriptor
+<div class="contenedor">
 
-    <br>
-    <br>
+    <header>
+            <a href="" class="logo"></a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="{{ url('/') }}">
+                <input type="button" value="Regresar">
+            </a>
+
+    </header>
+    <div class="inner_contenedor">
+
+
+        <div class="registro">
+
+        <h1>Registro</h1>
+
+
+        <input type="text" name="nombres" id="" placeholder="Nombres"  required>
+        <input type="text" name="apellidos" id="" placeholder="Apellidos"  required>
+        <input type="text" name="cedula" id="" placeholder="Cedula"  required>
+        <input type="email" name="correo" id="" placeholder="Correo electronico" " required>
+        <input type="text" name="telefono" id="" placeholder="Telefono"  required>
+        <input type="text" name="nombre_usuario" id="" placeholder="Nombre de Usuario" class="inputs-100" required>
+        <input type="password" name="password" id="" placeholder="Contraseña"  required>  
+   
+        <input type="submit" name="enviar" id="enviar" value="Enviar">     
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- <div class="contenedor">
+
+        
+<form action="registro.php" method="post" class="form-registro">
+    <h2 class="form-titulo">Crea una Cuenta</h2>
+    <div class="contenedor-inputs">
+
+        <input type="text" name="nombre" id="" placeholder="Nombres" class="inputs-50" required>
+        <input type="text" name="apellidos" id="" placeholder="Apellidos" class="inputs-50" required>
+        <input type="email" name="correo" id="" placeholder="Correo electronico" class="inputs-100" required>
+        <input type="text" name="direccion" id="" placeholder="Direccion" class="inputs-50" required>
+        <input type="tel" name="telefono" id="" placeholder="numero de telefono " class="inputs-50" required>
+        <select name="sexo" class="inputs-50" id="" required>
+            <option value="HOMBRE">Hombre</option>
+            <option value="MUJER">Mujer</option>
+        </select>
+        <input type="text" name="cedula" id="" placeholder="Cedula identidad" class="inputs-50" required>
+        <input type="text" name="usuario" id="" placeholder="Usuario" class="inputs-50" required>
+        <input type="password" name="password" id="" placeholder="password" class="inputs-50" required>
+        <input type="submit" value="Registrar" class="btn-enviar"> 
+        <p class="form-link">ya tienes una cuenta? <a href="#">Ingresa aquí</a></p>
+        
+    </div>
+
+</form>
+</div> -->
+
+    <!-- <p>Hola</p>
+
     
     <div>
         <form action="{{ url('/modulo_suscriptor/procesar_registrar') }}" method="post">
@@ -56,7 +119,7 @@
     </div>
 
     <br>
-    <br>
+    <br> -->
 
     <div id="mensaje">
         @isset($mensaje_servidor)
@@ -67,9 +130,6 @@
     <br>
     <br>
 
-    <a href="{{ url('/') }}">
-        <input type="button" value="Regresar">
-    </a>
 
 </body>
 </html>

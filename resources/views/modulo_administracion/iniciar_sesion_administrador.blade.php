@@ -5,55 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ asset('js/validaciones_formulario.js') }}"></script>
+    <link href="{{ asset('css/inicio_session.css') }}" rel="stylesheet">
+
     <title>Iniciar sesión administrador</title>
 </head>
 <body>
 
-    Iniciar sesión administrador
+    <div class="contenedor">
 
-    <br>
-    <br>
-    
-    <div>
-        <form action="{{ url('/modulo_administracion/procesar_iniciar_sesion') }}" method="post">
-            {{ csrf_field() }}
-            <table>
-                <tr>
-                    <td>Administrador</td>
-                    <td>
-                        <input type="text" name="nombre_usuario">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Contraseña</td>
-                    <td>
-                        <input type="password" name="contraseña">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" name="enviar" value="Enviar">
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <header>
+            <a href="" class="logo"></a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="{{ url('/') }}">
+                <input type="button" value="Regresar">
+            </a>
+
+        </header>
+
+        <div class="login_contenedor">
+
+            <div class="login">
+                <div class="login_title"><h2>Login</h2></div>
+                <form action="">
+
+                <label for="">Usuario</label>
+                    <input type="text">
+                <label for="">Password</label>
+                    <input type="password">
+                <input type="submit" name="enviar" value="Enviar">
+                </form>
+
+            </div>
+
+        </div>        
     </div>
-
-    <br>
-    <br>
 
     <div id="mensaje">
         @isset($mensaje_servidor)
             {{$mensaje_servidor}}
         @endisset
     </div>
-
-    <br>
-    <br>
-
-    <a href="{{ url('/') }}">
-        <input type="button" value="Regresar">
-    </a>
 
 </body>
 </html>
